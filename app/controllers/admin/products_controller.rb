@@ -2,6 +2,7 @@ class Admin::ProductsController < ApplicationController
   http_basic_authenticate_with name: ENV['USER_NAME'], password: ENV['USER_PASSWORD']
 
   def index
+    # render :json => Product.order(id: :desc).all
     @products = Product.order(id: :desc).all
   end
 
