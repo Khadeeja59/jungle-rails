@@ -25,7 +25,7 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.full_messages).to include("Quantity can't be blank")
     end
     it "with missing category attribute" do
-      @product = Product.new(:name => "Pan", :price => 100, :quantity=>nil, :category => nil)
+      @product = Product.new(:name => "Pan", :price => 100, :quantity=>10, :category => nil)
       expect(@product).not_to be_valid
       expect(@product.errors.full_messages).to include("Category can't be blank")
     end
