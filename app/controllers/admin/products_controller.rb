@@ -1,6 +1,6 @@
 class Admin::ProductsController < ApplicationController
-  http_basic_authenticate_with name: ENV['USER_NAME'], password: ENV['USER_PASSWORD']
-
+  # http_basic_authenticate_with name: ENV['USER_NAME'], password: ENV['USER_PASSWORD']
+   before_filter :authorize
   def index
     # render :json => Product.order(id: :desc).all
     @products = Product.order(id: :desc).all
