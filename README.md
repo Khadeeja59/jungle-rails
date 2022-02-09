@@ -1,13 +1,27 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2.
 
-## Additional Steps for Apple M1 Machines
+## Features
+- Users can register, login and logout.
+- Users can see all the products.
+- Users can add products to their cart, remove items, and pay.
+- Admins have access to a dashboard of the products and categories.
+- Admins can add/remove products and add categories.
 
-1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
-1. Install ImageMagick `brew install imagemagick imagemagick@6 --build-from-source`
-2. Remove Gemfile.lock
-3. Replace Gemfile with version provided [here](https://gist.githubusercontent.com/FrancisBourgouin/831795ae12c4704687a0c2496d91a727/raw/ce8e2104f725f43e56650d404169c7b11c33a5c5/Gemfile)
+## Screenshots
+
+Display of all the products.
+!["Display of products"](https://github.com/Khadeeja59/jungle-rails/blob/master/docs/products_display_page.jpeg?raw=true)
+
+Cart page.
+!["Cart page"](https://github.com/Khadeeja59/jungle-rails/blob/master/docs/cart_page.jpeg?raw=true)
+
+Admins can add products.
+!["Add products"](https://github.com/Khadeeja59/jungle-rails/blob/master/docs/admin_add_products.jpeg?raw=true)
+
+Admins can add differet categories.
+!["Add Categories"](https://github.com/Khadeeja59/jungle-rails/blob/master/docs/admin_add_categories.jpeg?raw=true)
 
 ## Setup
 
@@ -23,7 +37,6 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
-
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Dependencies
@@ -31,3 +44,5 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+* Rspec (for testing)
+* Capybara (for testing)
