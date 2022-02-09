@@ -20,13 +20,12 @@ RSpec.feature "Visitor navigates from the home page to the product details page"
 scenario "They view the product detail page" do
   # ACT
   visit root_path
-  #click on details button on first product
-    within first('article.product') do
-      # click_link 'Details »'
-      find(:css, ".btn.btn-default.pull-right").click
-    end
+  
+  within first('article.product') do
+    find(:css, ".btn.btn-default.pull-right").click
+  end
+  
+  expect(page).to have_css 'article.product-detail'
   save_and_open_screenshot
-
-expect(page).to have_css 'article.product-detail'
 end
 end
